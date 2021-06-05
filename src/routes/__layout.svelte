@@ -1,11 +1,11 @@
 <script>
-  import "../tailwinds.css"
-  import Nav from "../components/nav.svelte"
-  import Footer from "../components/footer.svelte"
+	import '../tailwinds.css';
+	import Nav from '../components/nav.svelte';
+	import Footer from '../components/footer.svelte';
 </script>
 
-<Nav />
-
-<slot />
-
-<Footer />
+<div class="p-8 max-w-6xl mx-auto">
+	<Nav />
+	<slot />
+	<Footer />
+</div>

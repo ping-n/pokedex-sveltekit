@@ -20,3 +20,15 @@ const fetchPokemon = async () => {
 };
 
 fetchPokemon();
+
+export const getPokemonById = async (id) => {
+	try {
+		const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+		const res = await fetch(url);
+		const data = await res.json();
+		return data;
+	} catch (err) {
+		console.error(err);
+		return null;
+	}
+};

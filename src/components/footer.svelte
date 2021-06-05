@@ -1,3 +1,3 @@
 <footer>
-  <p>By Justin Nge</p>
+	<p>By Justin Nge</p>
 </footer>
