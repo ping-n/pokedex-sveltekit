@@ -12,6 +12,10 @@
 <script>
 	export let poke;
 	let types = poke.types.map((data) => data.type.name);
+	let moves = poke.moves.map((data) => data.move.name);
+	let random;
+	let moveset = moves.slice(0, 4);
+	console.log(moveset);
 </script>
 
 <svelte:head>
@@ -25,5 +29,10 @@
 		<strong>{poke.height}</strong>
 		| Weight: <strong>{poke.weight}</strong>
 	</p>
+	<div class="h-25 grid grid-flow-col grid-rows-2">
+		{#each moveset as move}
+			<div>{move}</div>
+		{/each}
+	</div>
 	<img class="card-image" src={poke.sprites['front_default']} alt={poke.name} />
 </div>
